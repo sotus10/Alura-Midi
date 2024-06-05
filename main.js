@@ -1,7 +1,14 @@
-function playSonidoPom() {
-    document.querySelector ('#sonido_tecla_pom').play();
+//Creamos la función que reproducirá el sonido
+function playSonido(idElementoAudio) {
+    document.querySelector(idElementoAudio).play();
 }
 
-document.querySelector ('.tecla_pom').onclick = playSonidoPom;
-
 const listaDeTeclas = document.querySelectorAll('')
+
+let contador = 0;
+
+while (contador < 9) {
+   listaDeTeclas[contador].onclick = playSonido; 
+   contador = contador + 1;
+   console.log('Vuelta' + contador)
+}
